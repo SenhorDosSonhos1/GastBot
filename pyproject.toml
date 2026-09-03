@@ -10,7 +10,10 @@ requires-python = ">=3.13,<4.0"
 dependencies = [
     "fastapi[standard] (>=0.141.1,<0.142.0)",
     "pytest (>=9.1.1,<10.0.0)",
-    "uvicorn (>=0.52.4,<0.53.0)"
+    "uvicorn (>=0.52.4,<0.53.0)",
+    "sqlalchemy (>=2.0.52,<3.0.0)",
+    "pydantic-settings (>=2.15.0,<3.0.0)",
+    "psycopg[binary] (>=3.3.5,<4.0.0)"
 ]
 
 
@@ -33,3 +36,4 @@ run = "poetry run uvicorn app.main:app --reload"
 format = "ruff format ."
 lint = "ruff check ."
 fix = "ruff check . --fix"
+docker = "docker compose up -d --build"
