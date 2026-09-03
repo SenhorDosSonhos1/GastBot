@@ -4,4 +4,4 @@ app = FastAPI()
 
 @app.get("/")
 def hello():
-    return {"message": "hello, world!"}
+    return {"message": "API do GastBot está funcionando"}
