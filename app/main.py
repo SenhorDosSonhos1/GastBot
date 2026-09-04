@@ -4,7 +4,13 @@ from sqlalchemy.orm import Session
 
 from app.database import get_db
 
+from app.models.expense import Expense
+
+from app.routers.expense import router as expense_router
+
 app = FastAPI()
+
+app.include_router(expense_router)
 
 
 @app.get("/")
